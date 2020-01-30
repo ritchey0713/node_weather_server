@@ -14,11 +14,14 @@ app.get("/help", (req, resp) => {
 })
 
 app.get("/about", (req, resp) => {
-  resp.send("about page")
+  resp.send("<h1>This is a help page</h1>")
 })
 
 app.get("/weather", (req, resp) => {
-  resp.send("weather")
+  resp.send({
+    forecast: "forecast",
+    location: "the location"
+  })
 })
 
 
