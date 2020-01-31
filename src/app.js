@@ -1,6 +1,14 @@
 const express = require('express')
+const path = require("path")
+
+
+console.log(__dirname)
+
+const publicPath = path.join(__dirname, "../public")
 
 const app = express()
+
+app.use(express.static(publicPath))
 
 app.get("", (req, resp) => {
   resp.send("<h1>Weather App</h1>")
