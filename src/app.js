@@ -10,6 +10,9 @@ const app = express()
 
 app.use(express.static(publicPath))
 
+// some nonsense stuff here
+
+
 app.get("/help", (req, resp) => {
   resp.send({
     name: "Dj",
