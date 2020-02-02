@@ -1,15 +1,20 @@
 const express = require('express')
 const path = require("path")
 
+const app = express()
+
+// define paths for express config
 const publicPath = path.join(__dirname, "../public")
 const viewsPath = path.join(__dirname, "../templates")
 
-const app = express()
+// hbs setup and views location 
 app.set("view engine", "hbs")
 app.set("views", viewsPath)
+
+//set up dir to serve
 app.use(express.static(publicPath))
 
-
+//routes 
 app.get("", (req, resp) => {
   resp.render('index', {
     title: "weather",
@@ -39,6 +44,8 @@ app.get("/weather", (req, resp) => {
 })
 
 
+
+// port to use
 app.listen(3000, () => {
   console.log('Server booted!')
 })
