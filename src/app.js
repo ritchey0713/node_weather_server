@@ -6,11 +6,13 @@ const app = express()
 
 // define paths for express config
 const publicPath = path.join(__dirname, "../public")
-const viewsPath = path.join(__dirname, "../templates")
+const viewsPath = path.join(__dirname, "../templates/views")
+const partialsPath = path.join(__dirname, "../templates/partials")
 
 // hbs setup and views location 
 app.set("view engine", "hbs")
 app.set("views", viewsPath)
+hbs.registerPartials(partialsPath)
 
 //set up dir to serve
 app.use(express.static(publicPath))
