@@ -20,7 +20,7 @@ app.use(express.static(publicPath))
 //routes 
 app.get("", (req, resp) => {
   resp.render('index', {
-    title: "weather",
+    title: "weather app",
     name: "Dj"
   })
 })
@@ -28,7 +28,8 @@ app.get("", (req, resp) => {
 app.get("/help", (req, resp) => {
   resp.render("help", {
     title: "Help page",
-    content: "Please reach out with any issues"
+    content: "Please reach out with any issues",
+    name: "Dj"
   })
 })
 
