@@ -1,10 +1,6 @@
 const express = require('express')
 const path = require("path")
 
-
-
-// console.log(__dirname)
-
 const publicPath = path.join(__dirname, "../public")
 
 const app = express()
