@@ -47,6 +47,12 @@ app.get("/weather", (req, resp) => {
   })
 })
 
+app.get("*", (req, resp) => {
+  resp.render("404", {
+
+  })
+})
+
 
 
 // port to use
