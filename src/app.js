@@ -47,9 +47,17 @@ app.get("/weather", (req, resp) => {
   })
 })
 
+app.get("/help/*", (req, resp) => {
+  resp.render("404", {
+    error: "Help article not found",
+    name: "Dj"
+  })
+})
+
 app.get("*", (req, resp) => {
   resp.render("404", {
-
+    error: "Oops! page not found!",
+    name: "Dj"
   })
 })
 
