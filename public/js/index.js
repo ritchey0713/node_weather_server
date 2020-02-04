@@ -5,8 +5,7 @@ const search = document.querySelector("input")
 
 const fetchWeather = async(location) => {
     let resp = await fetch(`${baseURL}?address=${location}`)
-    let data = await resp.json()
-    return data
+    return await resp.json()
 }
 
 weatherForm.addEventListener("submit", (e) => {
