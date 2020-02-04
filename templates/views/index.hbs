@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="./styles/styles.css" rel="stylesheet">
   <link  rel="icon" href="images/weather.png">
-  <script src="./js/index.js"></script>
+  
   <title>Document</title>
 
 </head>
@@ -16,11 +16,12 @@
 
       <p>Find your daily weather!</p>
       <form>
-        <input type="text">
+        <input type="text" placeholder="Location">
         <button>Get weather</button>
       </form>
     </div>
+    {{>footer}}
   
 </body>
-{{>footer}}
+<script src="./js/index.js"></script>
 </html>
