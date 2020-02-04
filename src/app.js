@@ -41,9 +41,27 @@ app.get("/about", (req, resp) => {
 })
 
 app.get("/weather", (req, resp) => {
+  // resp.send({
+  //   forecast: "forecast",
+  //   location: "the location"
+  // })
+  console.log(req.query)
+  if(!req.query.address){
+    return resp.send({
+      error: "must provide an address!"
+    })
+  } else {
+    return resp.send({
+      address: req.query.address,
+      forecast: "Its snowing!!"
+    })
+  }
+})
+
+app.get("/products", (req, resp) => {
+  console.log(req.query)
   resp.send({
-    forecast: "forecast",
-    location: "the location"
+    products: []
   })
 })
 
